@@ -61,3 +61,13 @@ q2 <- perth_data %>%
   geom_point(alpha = 0.2)
 
 ggsave("figures/q2_all_measurements.png", q2, width = 5, height = 5)
+
+## Question 3: -----
+# Take the four plots you have produced in Q1 and Q2 and save them as a multi-panel figure.
+
+# put the legend on the bottom for the Q2 plot
+q2_on_bottom <- q2 + theme(legend.position = "bottom")
+
+four_plots <- plot_grid(q1_a, q1_b, q1_c, q2_on_bottom, labels = "AUTO")
+
+ggsave("figures/q3_four_plots_in_one.png", width = 12, height = 12)
