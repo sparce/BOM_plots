@@ -71,3 +71,5 @@ q2_on_bottom <- q2 + theme(legend.position = "bottom")
 four_plots <- plot_grid(q1_a, q1_b, q1_c, q2_on_bottom, labels = "AUTO")
 
 ggsave("figures/q3_four_plots_in_one.png", width = 12, height = 12)
+
+
